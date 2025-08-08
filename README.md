@@ -12,11 +12,16 @@ API 문서화: Swagger (OpenAPI 3.0) - springdoc-openapi <br>
 
 [실행방법] <br>
 -- 전체 환경 실행<br>
-: docker-compose up
+1. 빌드 & jar 생성
+ :./mvnw clean package -DskipTets (해당 프로젝트 경로 하위에서 실행)
+2. docker 이미지 빌드
+ : docker build -t reservation-app
+3. 컨테이너 실행
+ : docker run -d -p 8080:8080 --name reservation-container reservation-app
 
 -- Swagger UI 접속<br>
 : http://localhost:8080/swagger-ui/index.html
 
 해당 과제 덕분에 그동안의 개발 환경과 다른 jpa나 swagger api등을 접하는 좋은 경험을 하게 되었습니다.<br>
-본 코드가 정상적으로 동작하지 않아 죄송한 마음이 크지만 덕분에 새로운 부분을 공부하게되어 좋았습니다.<br>
+본 코드가 정상적으로 동작하지 않아 죄송한 마음이 크지만 덕분에 새로운 부분을 공부하게되어 좋았습니다!<br>
 감사합니다.
