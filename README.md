@@ -13,11 +13,9 @@ API 문서화: Swagger (OpenAPI 3.0) - springdoc-openapi <br>
 [실행방법] <br>
 -- 전체 환경 실행<br>
 1. 빌드 & jar 생성
- :./mvnw clean package -DskipTets (해당 프로젝트 경로 하위에서 실행)
-2. docker 이미지 빌드
- : docker build -t reservation-app
-3. 컨테이너 실행
- : docker run -d -p 8080:8080 --name reservation-container reservation-app
+ : ./mvnw clean package -DskipTets (해당 프로젝트 경로 하위에서 실행)
+2. 컨테이너 실행
+ : docker-compose up --build
 
 -- Swagger UI 접속<br>
 : http://localhost:8080/swagger-ui/index.html
